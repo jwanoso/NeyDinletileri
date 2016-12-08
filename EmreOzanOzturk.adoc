@@ -1,1 +1,43 @@
-İlk aşama olarak yeni bir proje oluşturulmuştur.
+08.12.2016 taihinde projede yapılan değişiklikler:
+
+İlk aşama olarak yeni bir proje oluşturulmuştur ve arka plan değiştirilmiştir.
+Kaynak kod aşağıda gösterildiği gibidir:
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#DADADA"
+    araçlar:bağlam=".MainActivity"
+    >
+</RelativeLayout>
+
+Daha sonra ise "listimage.xml" adlı yei bir dosya oluşturuldu ve listview özelleştirilmesi yapılmıştır.
+Kaynak kod aşağıda gösterilmiştir:
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/relo">
+    <!-- Defining where should text be placed. You set you text color here-->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_marginLeft="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list_content"
+        android:layout_alignTop="@+id/list_content" />
+
+    <TextView
+        android:id="@+id/list_content"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
