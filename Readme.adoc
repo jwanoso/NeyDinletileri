@@ -1,0 +1,3 @@
+Proje Adı: NeyDinletileri
+
+Proje Amacı: Farklı ney dinletileri müzik oynatıcısı olarak kullanıcılara sunulması
