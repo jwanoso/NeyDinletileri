@@ -10,7 +10,7 @@ Kaynak kod aşağıda gösterildiği gibidir:
     android:orientation="vertical"
     android:background="#DADADA"
     araçlar:bağlam=".MainActivity"
-    >
+>
 </RelativeLayout>
 
 Daha sonra ise "listimage.xml" adlı yei bir dosya oluşturuldu ve listview özelleştirilmesi yapılmıştır.
