@@ -1,1 +1,2 @@
-
+musics.xml dosyası oluşturuldu
+prev-back-stop-play butonları oluşturuldu.
