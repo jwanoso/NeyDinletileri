@@ -50,7 +50,6 @@
         android:layout_alignParentStart="true"
         android:textSize="28dp"
         android:textColor="#000">
-
     </TextView>
 
 
@@ -98,5 +97,14 @@
 
             />
     </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/gettext"
+            android:textColor="#ff00ebdd"
+            android:layout_above="@+id/seekBar"
+            android:layout_centerHorizontal="true" />
+    
 
 </RelativeLayout>
