@@ -1,4 +1,5 @@
 
+
 08.12.2016 taihinde projede yapılan değişiklikler:
 
 İlk aşama olarak yeni bir proje oluşturulmuştur ve arka plan değiştirilmiştir.
@@ -46,3 +47,22 @@ Kaynak kod aşağıda gösterilmiştir:
 
 Projede yapılan son değişiklik aşağıda belirtilmiştir:
     Projeye "raw" ve "drawable" klasörleri oluşturulumuştur. Raw klasöründe uygulamada bulunan melodiler, drawable klasöründe ise uygulamanın arka plan resmi mevcuttur.
+    
+    
+    Projeye uygulama içi reklam almayı sağlayan "banner" kısmı eklendi.
+    
+    
+    AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest addRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(addRequest);
+        
+        gecisReklam = new InterstitialAd(this);
+        gecisReklam.setAdUnitId("ca-app-pub-9661018467406372/7620638846");
+        adRequest = new AdRequest.Builder().build();
+        loadGecisReklam();
+        gecisReklam.setAdListener(new AdListener() {
+
+            @Override
+            public void onAdLoaded() {
+                showGecisreklam();
+            }
