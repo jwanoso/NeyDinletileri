@@ -1,3 +1,4 @@
+
 08.12.2016 taihinde projede yapılan değişiklikler:
 
 İlk aşama olarak yeni bir proje oluşturulmuştur ve arka plan değiştirilmiştir.
@@ -41,5 +42,7 @@ Kaynak kod aşağıda gösterilmiştir:
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
+
+
 Projede yapılan son değişiklik aşağıda belirtilmiştir:
     Projeye "raw" ve "drawable" klasörleri oluşturulumuştur. Raw klasöründe uygulamada bulunan melodiler, drawable klasöründe ise uygulamanın arka plan resmi mevcuttur.
