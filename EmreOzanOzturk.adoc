@@ -41,3 +41,6 @@ Kaynak kod aşağıda gösterilmiştir:
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
+
+Projede yapılan son değişiklik aşağıda belirtilmiştir:
+    Projeye "raw" ve "drawable" klasörleri oluşturulumuştur. Raw klasöründe uygulamada bulunan melodiler, drawable klasöründe ise uygulamanın arka plan resmi mevcuttur.
