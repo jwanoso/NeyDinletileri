@@ -1,3 +1,15 @@
+== *Uygulama içerisinde kısaca yaptıklarım*
+
+> splash screen den sonra ana ekranda görünecek olan layout yapısını oluşturmak
+
+> oluşturulan butonların işlevselliğini sağlamak için gerekli bağlantıları yapıp kodlamalarının yapılması.
+
+> google play servisini kullanarak uygulamaya geçiş reklamı ve banner reklamı yerleştirmek.
+
+> firebase notificon özelliğini kullanarak bildiri göndermek için gerekli google işlemlerini yapıp java dosyalarının kodlamak. 
+
+
+
 * musics.xml dosyası oluşturuldu
 * prev-back-stop-play butonları oluşturuldu.
 
