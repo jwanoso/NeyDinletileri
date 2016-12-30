@@ -1,5 +1,5 @@
-musics.xml dosyası oluşturuldu
-prev-back-stop-play butonları oluşturuldu.
+* musics.xml dosyası oluşturuldu
+* prev-back-stop-play butonları oluşturuldu.
 
   <TextView
         android:layout_width="wrap_content"
@@ -73,7 +73,7 @@ prev-back-stop-play butonları oluşturuldu.
             android:layout_centerHorizontal="true" />
     
     
-    Pesrevler.java dosyası oluşturuldu ve kodlama yapıldı
+    * Pesrevler.java dosyası oluşturuldu ve kodlama yapıldı 
     
     public class Pesrevler extends ActionBarActivity {
     private static final String[] items={"Ağıt",
