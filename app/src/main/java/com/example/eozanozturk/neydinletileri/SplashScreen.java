@@ -1,65 +1,84 @@
 package com.example.eozanozturk.neydinletileri;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
+
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.NotificationCompat;
-import android.util.Log;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
-import com.google.firebase.messaging.FirebaseMessagingService;
-import com.google.firebase.messaging.RemoteMessage;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class SplashScreen extends Activity {
+
+    TextView txtDate;
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.splash_screen);
+        txtDate= (TextView) findViewById(R.id.txtDate);
+        myAsycTask myA = new myAsycTask();
+        myA.execute();
+
+        Thread myThread = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    sleep(4000);
+                    Intent intent = new Intent(getApplicationContext(),Pesrevler.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        myThread.start();
+
+    }
 
 
-
-public class MyFirebaseMessagingService extends FirebaseMessagingService {
-
-    private static final String TAG = "MyFirebaseMsgService";
-
+class  myAsycTask extends AsyncTask<String ,Void,String > {
     @Override
-    public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (remoteMessage.getData().size() > 0) {
-            // Data mesajı içeriyor mu
-            //Uygulama arkaplanda veya ön planda olması farketmez. Her zaman çağırılacaktır.
-            //Gelen içerik json formatındadır.
-            Log.d(TAG, "Mesaj data içeriği: " + remoteMessage.getData());
-
-            //Json formatındaki datayı parse edip kullanabiliriz.
-            // Biz direk datayı Push Notification olarak bastırıyoruz
-
-            sendNotification("ibokngl",""+remoteMessage.getData());
+    protected String doInBackground(String... strings) {
+        return getIdContent();
+    }
+    @Override
+    protected void onPostExecute(String s) {
+        txtDate.setText(s);
+        super.onPostExecute(s);
     }
 }
 
-    private void sendNotification(String messageTitle,String messageBody) {
-        Intent intent = new Intent(this, Pesrevler.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    private  String getIdContent(){
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-                PendingIntent.FLAG_ONE_SHOT);
-
-        long[] pattern = {500,500,500,500};//Titreşim ayarı
-
-        android.support.v4.app.NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.common_google_signin_btn_icon_dark)
-                .setContentTitle(messageTitle)
-                .setContentText(messageBody)
-                .setAutoCancel(true)
-               // .setVibrate(pattern)
-                .setContentIntent(pendingIntent);
-
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        String line ="";
+        String data ="";
 
         try {
-            //    Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + this.getPackageName() + "/raw/notification");
-            //    Ringtone r = RingtoneManager.getRingtone(this, alarmSound);
-            //   r.play();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            URL url = new URL("http://kevsereskicuma.com/webservice/date.php");
+            HttpURLConnection con  = (HttpURLConnection)url.openConnection();
 
-        notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
-    }
+            con.setRequestMethod("GET");
+            con.setInstanceFollowRedirects(false);
+
+            if (con.getResponseCode() == HttpURLConnection.HTTP_OK){
+                InputStream response = con.getInputStream();
+                InputStreamReader reader = new InputStreamReader(response);
+                BufferedReader br =new BufferedReader(reader);
+                while ((line=br.readLine()) !=null){
+                    data +=line;
+                }
+            }
+
+        }catch (Exception e){}
+
+        return  data ;
     }
 
+}
