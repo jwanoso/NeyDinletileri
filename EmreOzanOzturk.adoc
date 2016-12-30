@@ -49,10 +49,10 @@ Kaynak kod aşağıda gösterilmiştir:
 4.Projeye uygulama içi reklam almayı sağlayan "banner" kısmı eklendi. Kaynak kodlar aşağıda belirtilmiştir.
     
     
-2    AdView mAdView = (AdView) findViewById(R.id.adView);
+        
+        AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest addRequest = new AdRequest.Builder().build();
         mAdView.loadAd(addRequest);
-        
         gecisReklam = new InterstitialAd(this);
         gecisReklam.setAdUnitId("ca-app-pub-9661018467406372/7620638846");
         adRequest = new AdRequest.Builder().build();
@@ -66,32 +66,32 @@ Kaynak kod aşağıda gösterilmiştir:
             
             
 5.Uygulamaya SplashScreen.java dosyası eklenmiştir. Bu dosyada uygulamanın web services kısmı ve thread kısmı bulunmaktadır.
-    5.1.Web services kısmında url'sini verdiğimiz iteden uygulamanın giriş ekranına tarih bilgisi alınmaktadır. Kaynak kod aşağıda            gösterildiği gibidir:   
+    5.1.Web services kısmında url'sini verdiğimiz iteden uygulamanın giriş ekranına tarih bilgisi alınmaktadır.             
     
-    
-     try {
-            URL url = new URL("http://kevsereskicuma.com/webservice/date.php");
-            HttpURLConnection con  = (HttpURLConnection)url.openConnection();
-            con.setRequestMethod("GET");
-            con.setInstanceFollowRedirects(false);
-            if (con.getResponseCode() == HttpURLConnection.HTTP_OK){
-
-                InputStream response = con.getInputStream();
-                InputStreamReader reader = new InputStreamReader(response);
-                BufferedReader br =new BufferedReader(reader);
-                while ((line=br.readLine()) !=null){
-
-                    data +=line;
-                }
-            }
+            
+        try {
+                URL url = new URL("http://kevsereskicuma.com/webservice/date.php");
+                HttpURLConnection con  = (HttpURLConnection)url.openConnection();
+                con.setRequestMethod("GET");
+                con.setInstanceFollowRedirects(false);
+                if (con.getResponseCode() == HttpURLConnection.HTTP_OK){
+                    InputStream response = con.getInputStream();
+                    InputStreamReader reader = new InputStreamReader(response);
+                    BufferedReader br =new BufferedReader(reader);
+                    while ((line=br.readLine()) !=null){
+                     data +=line;
+                    }
+                }
     
   
-  5.2. Thread kısmı için ise uygulamanın giriş ekranında 4 saniye beklendikten sonra uygulama persevler.java dosyasına geçerek uygulamanın an ekranına geçmektedir.
+ 
+5.2. Thread kısmı için ise uygulamanın giriş ekranında 4 saniye beklendikten sonra uygulama persevler.java dosyasına geçerek uygulamanın an ekranına geçmektedir.
+ 
     
-           Thread myThread = new Thread(){
+            Thread myThread = new Thread(){
             @Override
             public void run() {
-                try {
+            try {
                     sleep(4000);
                     Intent intent = new Intent(getApplicationContext(),Pesrevler.class);
                     startActivity(intent);
