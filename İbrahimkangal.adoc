@@ -74,11 +74,14 @@
             android:layout_above="@+id/seekBar"
             android:layout_centerHorizontal="true" />
             
-    ---
+
+
+---
     
     * Pesrevler.java dosyası oluşturuldu ve kodlama yapıldı 
     
-    ---
+    
+---
     
     public class Pesrevler extends ActionBarActivity {
     private static final String[] items={"Ağıt",
@@ -270,6 +273,8 @@
         if(mediaPlayer!=null)
             mediaPlayer.stop();
     }
+    
+    
     
 ---
 
