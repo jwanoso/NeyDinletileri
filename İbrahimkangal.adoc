@@ -4,7 +4,7 @@
 
 > oluşturulan butonların işlevselliğini sağlamak için gerekli bağlantıları yapıp kodlamalarının yapılması.
 
-> google play servisini kullanarak uygulamaya geçiş reklamı ve banner reklamı yerleştirmek.
+> google play servisini kullanarak uygulamaya geçiş reklamı ve banner reklamı yerleştirmek ve gerekli yayıncı idsini almak .
 
 > firebase notificon özelliğini kullanarak bildiri göndermek için gerekli google işlemlerini yapıp java dosyalarının kodlamak. 
 
