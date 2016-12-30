@@ -1,7 +1,7 @@
 *UYGULAMA TANITIM VİDEOSU*
 
-video::tanıtım.mp4[width=640, start=60, end=140, options=autoplay]
+video::video_tanıtım.mp4[width=640, start=60, end=140, options=autoplay]
 
 *UYGULAMA WEB SERVİS VİDEOSU*
 
-video::webservis.mp4[width=640, start=60, end=140, options=autoplay]
+video::video_webservis.mp4[width=640, start=60, end=140, options=autoplay]
