@@ -26,7 +26,7 @@ image::main.png[width="200", height="330"]
 
 image::prev.png[width="200", height="330"]
 
-* next butom : çalan dinleten sonraki dinletileye geçişi sağlar. Lakin son dinletide basılırsa bir toast mesajı veririr "Son Şarkı." Bir daha basılırsa listenin başına geçiş sağlanır.
+* next buton : çalan dinleten sonraki dinletileye geçişi sağlar. Lakin son dinletide basılırsa bir toast mesajı veririr "Son Şarkı." Bir daha basılırsa listenin başına geçiş sağlanır.
 
 image::next.png[width="200", height="330"]
 
