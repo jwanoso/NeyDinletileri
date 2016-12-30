@@ -278,11 +278,11 @@
     
 ---
 
-*Firebase bağlantısını sağlamak için MyFirebaseInstanceIDService.java ve MyFirebaseMessagingService.java dosyaları oluşturuldu.
+* Firebase bağlantısını sağlamak için MyFirebaseInstanceIDService.java ve MyFirebaseMessagingService.java dosyaları oluşturuldu.
 
 ---
 
-**MyFirebaseInstanceIDService.java
+** MyFirebaseInstanceIDService.java
 
 package com.example.eozanozturk.neydinletileri;
 
@@ -312,7 +312,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
 ---
 
-**MyFirebaseMessagingService.java
+** MyFirebaseMessagingService.java
 
 ---
 
