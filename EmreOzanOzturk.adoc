@@ -4,7 +4,7 @@
 1.İlk aşama olarak yeni bir proje oluşturulmuştur ve arka plan değiştirilmiştir.
 Kaynak kod aşağıda gösterildiği gibidir:
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -17,7 +17,7 @@ Kaynak kod aşağıda gösterildiği gibidir:
 2.Daha sonra ise "listimage.xml" adlı yei bir dosya oluşturuldu ve listview özelleştirilmesi yapılmıştır.
 Kaynak kod aşağıda gösterilmiştir:
 
-<RelativeLayout
+    <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center_vertical"
     android:layout_width="fill_parent"
@@ -44,11 +44,9 @@ Kaynak kod aşağıda gösterilmiştir:
 </RelativeLayout>
 
 
-3.Projede yapılan son değişiklik aşağıda belirtilmiştir:
-    Projeye "raw" ve "drawable" klasörleri oluşturulumuştur. Raw klasöründe uygulamada bulunan melodiler, drawable klasöründe ise uygulamanın arka plan resmi mevcuttur.
-    
-    
- 4.Projeye uygulama içi reklam almayı sağlayan "banner" kısmı eklendi.
+3.Projeye "raw" ve "drawable" klasörleri oluşturulumuştur. Raw klasöründe uygulamada bulunan melodiler, drawable klasöründe ise uygulamanın arka plan resmi mevcuttur.
+
+4.Projeye uygulama içi reklam almayı sağlayan "banner" kısmı eklendi. Kaynak kodlar aşağıda belirtilmiştir.
     
     
     AdView mAdView = (AdView) findViewById(R.id.adView);
