@@ -39,7 +39,7 @@ Kaynak kod aşağıda gösterilmiştir:
         android:layout_width="fill_parent"
         android:layout_height="35dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true" />
 
 </RelativeLayout>
 
@@ -66,9 +66,12 @@ Kaynak kod aşağıda gösterilmiştir:
             
             
 5.Uygulamaya SplashScreen.java dosyası eklenmiştir. Bu dosyada uygulamanın web services kısmı ve thread kısmı bulunmaktadır.
-    5.1.Web services kısmında url'sini verdiğimiz iteden uygulamanın giriş ekranına tarih bilgisi alınmaktadır.             
+5.1.Web services kısmında url'sini verdiğimiz iteden uygulamanın giriş ekranına tarih bilgisi alınmaktadır.             
     
             
+        
+        
+        
         try {
                 URL url = new URL("http://kevsereskicuma.com/webservice/date.php");
                 HttpURLConnection con  = (HttpURLConnection)url.openConnection();
