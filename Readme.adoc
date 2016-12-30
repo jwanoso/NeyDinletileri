@@ -33,9 +33,9 @@ image::next.png[width="200", height="330"]
 * play buton : dinletiyi başlatır.
 * stop buton : dinletiyi durdurur.
 
-*4.FİREBASE NOTIFYICON*
+*4.FİREBASE NOTIFICATION*
 
-uygulamaya bir firebase bağlantısı kurup kullanıcılara bildiri gönderimi sağlandı.
+Uygulamaya bir firebase bağlantısı kurup kullanıcılara bildiri gönderimi sağlandı.
 
 image::firebase2.png[width="200", height="330"]
 
